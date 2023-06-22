@@ -1,0 +1,31 @@
+#include <bits/stdc++.h> 
+pair<int, int> firstAndLastPosition(vector<int>& arr, int n, int k)
+{
+    //initialization
+    int ans1=-1,ans2=-1;
+    //find the first position of key element
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]==k)
+        {
+            ans1= i;          
+            break;   
+        }
+    }
+    //find the last position of key element
+    for(int i=n-1;i>=0;i--)
+    {
+        if(arr[i]==k)
+        {
+            ans2=i;
+            break;
+        }
+    }
+
+    pair<int,int> p;
+    p.first=ans1;
+    p.second=ans2;
+
+    return p;
+    
+}
