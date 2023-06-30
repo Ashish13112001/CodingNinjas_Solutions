@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+
+vector<int> searchRange(vector<int> &arr, int x)
+{
+//if array is empty
+if(arr.size()==0)
+return{};
+
+//find the first index of element x
+int first=lower_bound(arr.begin(),arr.end(),x)-arr.begin();
+
+//find the last index of element x(last index = last-1)
+int last=upper_bound(arr.begin(),arr.end(),x)-arr.begin();
+
+//if element is not present in the array
+if(arr[first]!=x){
+first=last=-1;
+return {first,last};
+}
+
+else
+return {first,last-1};
+
+}
