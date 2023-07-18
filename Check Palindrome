@@ -1,0 +1,15 @@
+bool isPalindrome(string &s)
+{
+	// Write your code here.
+	int f=0;
+	int l=s.length()-1;
+	while(f<l)
+	{
+		if(s[f] != s[l])
+		return 0;
+		else{
+			f++;l--;
+		}
+	}
+	return 1;
+}
